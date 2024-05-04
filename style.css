@@ -1,6 +1,7 @@
 /* Include */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap");
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
 @font-face {
   font-family: "monument_extendedregular";
   src: url("https://www.yudiz.com/codepen/photography-banner/monumentextended-regular.woff2")
@@ -1997,8 +1998,8 @@ left: -30px;
   margin-bottom: 60px;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #ffffff; /* $button-bg replaced with #ff0081 */
-  color: #000000; /* $button-text-color replaced with #fff */
+  background-color: #ffffff;
+  color: #000000; 
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -2078,4 +2079,139 @@ left: -30px;
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+
+/* Helpers */
+.clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.align-center {
+   text-align: center;
+}
+
+.row {
+   margin: -20px 0;
+}
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+.row .col {
+   padding: 0 20px;
+   float: left;
+   box-sizing: border-box;
+}
+.row .col.x-50 {
+   width: 50%;
+}
+.row .col.x-100 {
+   width: 100%;
+}
+
+.content-wrapper {
+   min-height: 100%;
+   position: relative;
+}
+
+.get-in-touch {
+   max-width: 650px;
+   margin: 0 auto;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.get-in-touch .title {
+   text-align: center;
+   font-family: "Poppins", sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-size: 36px;
+   line-height: 48px;
+   padding-bottom: 48px;
+   color: wheat;
+   font-weight: 700;
+}
+
+.contact-form .form-field {
+   position: relative;
+   margin: 32px 0;
+}
+.contact-form .input-text {
+   display: block;
+   width: 100%;
+   height: 38px;
+   border-width: 0 0 2px 0;
+   border-color: #000;
+   font-family: "Poppins", sans-serif;
+   font-size: 18px;
+   line-height: 26px;
+   font-weight: 400;
+}
+.contact-form .input-text:focus {
+   outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+   transform: translateY(-24px);
+}
+.contact-form .label {
+   position: absolute;
+   left: 30px;
+   bottom: 11px;
+   font-family: "Poppins", sans-serif;
+   font-size: 15px;
+   line-height: 26px;
+   font-weight: 400;
+   color: #888;
+   cursor: text;
+   transition: transform .2s ease-in-out;
+}
+
+
+.bubbly-buttonx {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff; 
+  color: #000000; 
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 255, 255, 0.5);
+}
+
+.bubbly-buttonx:focus {
+  outline: 0;
+}
+
+.bubbly-buttonx:before,
+.bubbly-buttonx:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+.bubbly-buttonx:active {
+  transform: scale(0.9);
+  background-color: darken(#ff0081, 5%);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
