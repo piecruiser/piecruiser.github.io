@@ -1,4 +1,6 @@
 /* Include */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap");
+
 @font-face {
   font-family: "monument_extendedregular";
   src: url("https://www.yudiz.com/codepen/photography-banner/monumentextended-regular.woff2")
@@ -1740,11 +1742,340 @@ body {
     height: 65px;
   }
 }
-.footer {
-  color: rgba(250, 235, 215, 0.258);
+
+body.contact-on .hero-section {
+	transform: scale(0.75);
+	-webkit-transition-delay: 0ms;
+	transition-delay: 0ms;
+}
+
+.contact-text {
   position: absolute;
-  font-family: "Poppins", sans-serif;
-  top: 94%;
-  left: 43%;
+font-size: 17px;
+line-height: 20px;
+font-weight: 700;
+color: #fff;
+letter-spacing: 2px;
+top: 40%;
+left: 750px;
+cursor: pointer;
+z-index: 2;
+-webkit-writing-mode: vertical-lr;
+writing-mode: vertical-lr;
+transform: translateY(-50%) rotate(180deg);
+-webkit-transition: all 200ms linear;
+transition: all 200ms linear;
+}
+.contact-text:before {
+position: absolute;
+content: '';
+top: 50%;
+left: -25px;
+height: 30px;
+width: 30px;
+margin-top: -15px;
+z-index: -1;
+background-repeat: no-repeat;
+background-position: center;
+background-size: 30px 30px;
+background-image: url('http://www.ivang-design.com/svg-load/portfolio/left.svg');
+opacity: 0.2;
+-webkit-transition: all 200ms linear;
+transition: all 200ms linear;
+}
+.contact-text:hover:before {
+opacity: 1;
+left: -30px;
+}
   
+/* Special Section CSS */
+
+/* Importing font */
+
+
+/* Reset */
+.special-section * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.special-section body {
+  background: #171717;
+  min-height: 100vh;
+}
+
+.special-section img {
+  max-width: 100%;
+  display: block;
+}
+
+.special-section ul {
+  list-style-type: none;
+}
+
+.special-section ul i {
+  color: #fff;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+
+.special-section ul i:hover {
+  color: #f2709c;
+}
+/* Special Section Styles */
+.special-section {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding: min(20vh, 6rem) 0;
+  text-align: center;
+  width: calc(min(90rem, 90%));
+  margin: auto;
+}
+
+.special-section span,
+.special-section p,
+.special-section h2,
+.special-section h3 {
+  letter-spacing: 0.035rem;
+}
+
+.special-section p {
+  line-height: 1.6;
+  color: #a3a3a3;
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+
+.special-section h2 {
+  font-size: clamp(3.5rem, 3rem + 1.6vw, 5rem);
+  margin-top: -0.625rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.special-section .bg-watermark {
+  color: #66656571;
+  font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
+  font-weight: 800;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translatex(-50%) translatey(-15%);
+  user-select: none;
+  letter-spacing: 0.5rem;
+}
+
+.special-section span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.2rem;
+  color: #a3a3a3;
+}
+/* Cards Section Styles */
+.special-section .cards {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: 2rem;
+}
+
+@media screen and (min-width: 51rem) {
+  .special-section .cards {
+    gap: 0;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.special-section .cards .card {
+  position: relative;
+  cursor: pointer;
+}
+
+.special-section .cards .card h3,
+.special-section .cards .card p {
+  text-transform: capitalize;
+}
+
+.special-section .cards .card h3 {
+  font-size: clamp(1rem, 0.9167rem + 0.2667vw, 1.25rem);
+  font-weight: 400;
+  color: #f6f6f6;
+}
+
+.special-section .cards .card p {
+  font-size: clamp(0.85rem, 0.75rem + 0.32vw, 1.15rem);
+  letter-spacing: 0.12rem;
+  font-weight: 300;
+  max-width: 100%;
+}
+
+.special-section .cards .card::before {
+  position: absolute;
+  content: "";
+  width: 5rem;
+  height: 6.25rem;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+  background: #f2709c;
+  background: -webkit-linear-gradient(to left, #ff9472, #f2709c);
+  background: linear-gradient(to left, #ff9472, #f2709c);
+}
+
+.special-section .cards .card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #232526;
+  background: -webkit-linear-gradient(to bottom, hsl(210deg 2.99% 26.27% / 20%), hsl(0deg 0% 3.14% / 90%));
+  background: linear-gradient(to bottom, hsl(210deg 2.99% 26.27% / 20%), hsl(0deg 0% 3.14% / 90%));
+}
+
+.special-section .cards .card img {
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+
+.special-section .cards .card .card-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  padding: 1.875rem 1.25rem;
+  text-align: center;
+}
+
+.special-section .cards .card .card-content ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.special-section .cards .card:hover img {
+  filter: grayscale(0%);
+}
+
+.special-section .cards .card:hover::before {
+  transform: scale(1.03);
+}
+
+.special-section .cards .card:nth-child(1)::before {
+  top: -0.375rem;
+  left: -0.375rem;
+}
+
+.special-section .cards .card:nth-child(2)::before {
+  left: -0.375rem;
+  top: 86%;
+}
+.card:nth-child(2) {
+  @media (min-width: 500px) {
+    transform: translateY(15%);
+  }
+}
+
+.special-section .cards .card:nth-child(3)::before {
+  top: -0.375rem;
+  left: -0.375rem;
+}
+
+
+
+.bubbly-button {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff; /* $button-bg replaced with #ff0081 */
+  color: #000000; /* $button-text-color replaced with #fff */
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 255, 255, 0.5);
+}
+
+.bubbly-button:focus {
+  outline: 0;
+}
+
+.bubbly-button:before,
+.bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: darken(#ff0081, 5%);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
