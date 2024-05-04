@@ -9,6 +9,19 @@ function scrollToNextSection() {
   var specialSection = document.querySelector('.special-section');
   specialSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+function scrollToContact() {
+  var specialSection = document.querySelector('.get-in-touch');
+  specialSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
   
 var typing = new Typed(".text", {
   strings: ["", "the car.", "the robot."],
