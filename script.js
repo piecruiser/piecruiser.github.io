@@ -40,3 +40,5 @@ introsplitTypes.forEach((char, i) => {
     duration: 0.3 
   });
 });
+
+
