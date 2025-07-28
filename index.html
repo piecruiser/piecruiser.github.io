@@ -1,5 +1,7 @@
 <!-- Author : Aindrik Sarkar
-Copyright © 2024 PieCruiser. -->
+Copyright © 2024 PieCruiser.
+Total Lines of code : 213 -->
+<!-- Domain name : https://piecruiser.github.io/ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +17,23 @@ Copyright © 2024 PieCruiser. -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/SplitText.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link
+    <link
     rel="icon"
     href=
 "https://raw.githubusercontent.com/piecruiser/piecruiser.github.io/main/logo.png"
     type="image/x-icon"
-/>       
+/>   
 </head>
 
 <body>
+    <div class="nav-bar">
+        <div class="nav-links-container">
+            <a class="nav-link active" href="#topSection" id="topLink" onclick="home()">Home</a>
+            <a class="nav-link" href="#servicesSection" id="servicesLink" onclick="works()">Works</a>
+            <a class="nav-link" href="#teamSection" id="teamLink" onclick="scrollToNextSection()">Team</a>
+            <a class="nav-link" href="#contactSection" id="contactLink" onclick="scrollToContact()">Contact</a>
+        </div>
+    </div>
   <main>
 
 <!-- FrontSection - aindrik / Copyright © 2024 PieCruiser. -->
@@ -90,12 +100,52 @@ Copyright © 2024 PieCruiser. -->
           </div>
       </section>
 
+
+      <section class="travel-section">
+        <br><br><br><br>
+        <h2>Our Works</h2>
+        <p>Experience the future of mobility through our autonomous devices.</p>
+        <br><br>
+        <main class="page-content">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Pothole Detection</h2>
+                    <p class="copy">Detecting potholes for safer journeys ahead.</p>
+                    <button class="btn" onclick="window.open('https://github.com/piecruiser', '_blank')">More Info</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Hydroponic System</h2>
+                    <p class="copy">"AI-powered Smart Hydroponic System with automated monitoring, plant health analysis, and IoT-based alerts."</p>
+                    <button class="btn"onclick="window.open('https://github.com/piecruiser', '_blank')">More Info</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">Smart Trolley</h2>
+                    <p class="copy">"Effortless urban mobility with our smart trolley."</p>
+                    <button class="btn"onclick="window.open('https://github.com/piecruiser', '_blank')">More Info</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">More Projects</h2>
+                    <p class="copy">Coming soon!</p>
+                    <button class="btn">SOON</button>
+                </div>
+            </div>
+        </main>
+    </section>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    
 <!-- MeetOurTeam Section / Copyright © 2024 PieCruiser. -->
 
       <section class="special-section" id="special-section">
         <span>meet our</span>
         <h2>Team</h2>
-        <p>Our team is dedicated to revolutionizing transportation through cutting-edge self-driving car technology. </p>
+        <p>Our team is dedicated to revolutionizing transportation through cutting-edge self-driving car technology.</p>
         <span class="bg-watermark">team</span>
         <div class="cards">
           <div class="card">
@@ -115,7 +165,7 @@ Copyright © 2024 PieCruiser. -->
               <h3>Sandeep Suthar</h3>
               <p>Hardware Lead</p>
               <ul>
-                <li><a href="https://github.com/sandeepsuthar992"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/sandeep-suthar-3a1822257/"><i class="fab fa-linkedin-in"></i></a></li>
               </ul>
             </div>
@@ -137,36 +187,39 @@ Copyright © 2024 PieCruiser. -->
 
 <br><br><br><br><br><br><br><br><br><br><br>
 
+
 <!-- Contact Section / Copyright © 2024 PieCruiser. -->
 
       <section class="get-in-touch">
         <h1 class="title">Get in touch</h1>
         <form class="contact-form row" action="https://formsubmit.co/iamaindrik@gmail.com" method="POST">
-                    <!-- Honeypot -->
+
+          <!-- Honeypot -->
           <input type="text" name="_honey" style="display: none;">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://piecruiser.github.io/submit.html">
           
            <div class="form-field col x-50">
-              <input id="name" class="input-text js-input" type="text" name="name" required>
-              <label class="label" for="name" >Name</label>
+              <input id="name" class="input-text js-input" type="text" required>
+              <label class="label" for="name">Name</label>
            </div>
            <div class="form-field col x-50">
-              <input id="email" class="input-text js-input" type="email" name="email" required>
-              <label class="label" for="email" >E-mail</label>
+              <input id="email" class="input-text js-input" type="email" required>
+              <label class="label" for="email">E-mail</label>
            </div>
            <div class="form-field col x-100">
-              <input id="message" class="input-text js-input" type="text"  name="message" required>
+              <input id="message" class="input-text js-input" type="text" required>
               <label class="label" for="message">Message</label>
            </div>
            <div class="form-field col x-100 align-center">
               <input class="bubbly-buttonx" type="submit" value="Submit">
            </div>
         </form>
-     </section>
-
+    <footer class="footer text-center text-white">
+        <p>&copy; PieCruiser 2025</p>
+    </footer>
 
       <script src="script.js"></script>
   </main>
-</body>
+</body> 
 </html>
