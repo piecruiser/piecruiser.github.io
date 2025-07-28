@@ -5,6 +5,7 @@ document.getElementById("myButton").addEventListener("click", function() {
   }, 1000);
   });
 
+
 function scrollToNextSection() {
   var specialSection = document.querySelector('.special-section');
   specialSection.scrollIntoView({ behavior: 'smooth' });
@@ -12,6 +13,14 @@ function scrollToNextSection() {
 
 function scrollToContact() {
   var specialSection = document.querySelector('.get-in-touch');
+  specialSection.scrollIntoView({ behavior: 'smooth' });
+}
+function home() {
+  var specialSection = document.querySelector('.info-section');
+  specialSection.scrollIntoView({ behavior: 'smooth' });
+}
+function works() {
+  var specialSection = document.querySelector('.travel-section');
   specialSection.scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -24,7 +33,7 @@ $( '.js-input' ).keyup(function() {
 });
   
 var typing = new Typed(".text", {
-  strings: ["", "the car.", "the robot."],
+  strings: ["", "deep code.", "deep impact."],
   typeSpeed: 100,
   backSpeed: 40,
   loop: true
@@ -40,5 +49,4 @@ introsplitTypes.forEach((char, i) => {
     duration: 0.3 
   });
 });
-
 
