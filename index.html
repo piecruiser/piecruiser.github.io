@@ -995,8 +995,28 @@ footer{
 .footer-legal a:hover{color:var(--grey)}
 
 /* ═══════════════════════════════════════════════
-   BACK TO TOP
+   WHATSAPP BUTTON
 ═══════════════════════════════════════════════ */
+#whatsapp-btn{
+  position:fixed;bottom:88px;right:32px;z-index:500;
+  display:flex;align-items:center;gap:8px;
+  padding:10px 18px;
+  background:#25D366;color:#fff;
+  font-family:var(--font-body);
+  font-size:0.82rem;font-weight:600;
+  letter-spacing:0.3px;
+  border-radius:var(--radius-xl);
+  border:none;cursor:pointer;
+  box-shadow:0 4px 20px rgba(37,211,102,0.35);
+  text-decoration:none;
+  transition:transform var(--transition),box-shadow var(--transition),background var(--transition);
+}
+#whatsapp-btn:hover{
+  background:#1ebe5d;
+  transform:translateY(-2px);
+  box-shadow:0 8px 28px rgba(37,211,102,0.45);
+}
+#whatsapp-btn i{font-size:1rem}
 #back-top{
   position:fixed;bottom:32px;right:32px;z-index:500;
   width:44px;height:44px;border-radius:50%;
@@ -1116,7 +1136,7 @@ footer{
           <div class="stat-label">Projects Delivered</div>
         </div>
         <div>
-          <div class="stat-val">1<span>+</span></div>
+          <div class="stat-val">4<span>+</span></div>
           <div class="stat-label">Happy Clients</div>
         </div>
         <div>
@@ -1161,16 +1181,16 @@ footer{
     <div class="ticker-item"><span class="ticker-dot"></span>App Development</div>
     <div class="ticker-item"><span class="ticker-dot"></span>Plant Health AI</div>
     <div class="ticker-item"><span class="ticker-dot"></span>IoT Systems</div>
-    <div class="ticker-item"><span class="ticker-dot"></span>Smart Agriculture</div>
-    <div class="ticker-item"><span class="ticker-dot"></span>Pothole Detection</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>Instagram Reels</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>YouTube Shorts</div>
     <div class="ticker-item"><span class="ticker-dot"></span>Website Design</div>
     <div class="ticker-item"><span class="ticker-dot"></span>AI Services</div>
     <div class="ticker-item"><span class="ticker-dot"></span>Video Editing</div>
     <div class="ticker-item"><span class="ticker-dot"></span>App Development</div>
     <div class="ticker-item"><span class="ticker-dot"></span>Plant Health AI</div>
     <div class="ticker-item"><span class="ticker-dot"></span>IoT Systems</div>
-    <div class="ticker-item"><span class="ticker-dot"></span>Smart Agriculture</div>
-    <div class="ticker-item"><span class="ticker-dot"></span>Pothole Detection</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>Instagram Reels</div>
+    <div class="ticker-item"><span class="ticker-dot"></span>YouTube Shorts</div>
   </div>
 </div>
 
@@ -1278,9 +1298,9 @@ footer{
         <div class="section-label">Our Projects</div>
         <h2 class="section-title">Work That<br/>Speaks for Itself</h2>
       </div>
-      <a href="https://github.com/piecruiser" target="_blank" rel="noopener"
+      <a href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener"
          class="btn-secondary reveal" style="flex-shrink:0">
-        <i class="fa-brands fa-github"></i> GitHub
+        <i class="fa-brands fa-instagram"></i> Instagram
       </a>
     </div>
 
@@ -1301,8 +1321,8 @@ footer{
             <div class="work-tech">
               <span>Computer Vision</span><span>Python</span><span>IoT</span><span>Raspberry Pi</span>
             </div>
-            <a href="https://github.com/iamaindrik/Organic-Pie" target="_blank" rel="noopener" class="work-link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener" class="work-link">
+              <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -1330,55 +1350,37 @@ footer{
         </div>
       </div>
 
-      <!-- Pothole Detection -->
+      <!-- Video Sample 1 -->
       <div class="work-card reveal reveal-delay-1">
-        <div class="work-img">
-          <img src="https://www.thesouthafrican.com/wp-content/uploads/2023/11/Potholes.jpg.optimal.jpg" alt="Pothole Detection" loading="lazy"/>
-          <div class="work-badge">AI · Safety</div>
+        <div class="work-img" style="aspect-ratio:9/16;max-height:420px;background:#000">
+          <video src="Sample_Edit.mp4" controls playsinline muted loop style="width:100%;height:100%;object-fit:cover;display:block"></video>
+          <div class="work-badge">Video · Reels</div>
         </div>
         <div class="work-body">
-          <h3>Pothole Detection System</h3>
-          <p>Real-time road defect detection using computer vision and edge AI — making roads safer for everyone.</p>
+          <h3>Instagram Reel / YouTube Short</h3>
+          <p>High-energy short-form video edit crafted for maximum engagement — punchy cuts, dynamic motion, and on-brand storytelling for social media.</p>
           <div class="work-body-footer">
-            <div class="work-tech"><span>CV</span><span>Python</span><span>Edge AI</span></div>
-            <a href="https://github.com/piecruiser" target="_blank" rel="noopener" class="work-link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="work-tech"><span>Premiere Pro</span><span>After Effects</span><span>Color Grading</span></div>
+            <a href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener" class="work-link">
+              <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Hydroponic -->
+      <!-- Video Sample 2 -->
       <div class="work-card reveal reveal-delay-2">
-        <div class="work-img">
-          <img src="https://spicymoustache.com/wp-content/uploads/2024/11/hydroponic-garden-1.png" alt="Hydroponic System" loading="lazy"/>
-          <div class="work-badge">AI · Agriculture</div>
+        <div class="work-img" style="aspect-ratio:9/16;max-height:420px;background:#000">
+          <video src="Sample_Video.mp4" controls playsinline muted loop style="width:100%;height:100%;object-fit:cover;display:block"></video>
+          <div class="work-badge">Video · Shorts</div>
         </div>
         <div class="work-body">
-          <h3>Smart Hydroponic System</h3>
-          <p>AI-powered automated hydroponic monitoring with IoT sensors, plant health analytics, and smart alerts.</p>
+          <h3>Short-Form Content Production</h3>
+          <p>Professional vertical video production optimised for Instagram Reels and YouTube Shorts — compelling visuals and crisp sound design that drive views and shares.</p>
           <div class="work-body-footer">
-            <div class="work-tech"><span>IoT</span><span>AI</span><span>Raspberry Pi</span></div>
-            <a href="https://github.com/piecruiser" target="_blank" rel="noopener" class="work-link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Smart Trolley -->
-      <div class="work-card reveal reveal-delay-3">
-        <div class="work-img">
-          <img src="https://images.assettype.com/smeadvisor/2024-01/5e13aa16-8a70-431a-a53c-421b65f698b0/Al_Meera.jpg?w=1200" alt="Smart Trolley" loading="lazy"/>
-          <div class="work-badge">Hardware</div>
-        </div>
-        <div class="work-body">
-          <h3>Smart Trolley</h3>
-          <p>An autonomous smart trolley with navigation, barcode scanning, and real-time billing for seamless retail experience.</p>
-          <div class="work-body-footer">
-            <div class="work-tech"><span>Arduino</span><span>Sensors</span><span>Python</span></div>
-            <a href="https://github.com/piecruiser" target="_blank" rel="noopener" class="work-link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="work-tech"><span>DaVinci Resolve</span><span>Motion Graphics</span><span>Sound Design</span></div>
+            <a href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener" class="work-link">
+              <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -1404,7 +1406,6 @@ footer{
         <div class="client-logo-wrap"><img src="assets/green-refuel-logo.png" alt="Green Refuel Organics LLP" style="width:100%;height:100%;object-fit:contain;padding:6px"/></div>
         <div>
           <div class="client-name">Green Refuel Organics LLP</div>
-          <div class="client-industry">Organic Agriculture</div>
         </div>
         <p class="client-desc">A sustainable agriculture company committed to organic farming and eco-friendly produce. We built their complete digital portfolio and brand web presence.</p>
         <a href="https://greenrefuelorganics.com/" target="_blank" rel="noopener" class="client-website">
@@ -1443,6 +1444,30 @@ footer{
             <div class="review-author-info">
               <strong>Nikunj Tanna</strong>
               <span>Founder, Green Refuel Organics LLP</span>
+            </div>
+            <div class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal-delay-2">
+          <span class="review-quote">"</span>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            PieCruiser has been an incredible video editing partner for our agency. The quality, consistency,
+            and turnaround on every edit have been exceptional — they genuinely understand our creative vision
+            and deliver content that performs. Highly recommend them for any brand looking for top-tier video production.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">HE</div>
+            <div class="review-author-info">
+              <strong>House of Edit</strong>
+              <span>Creative Agency</span>
             </div>
             <div class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</div>
           </div>
@@ -1492,24 +1517,20 @@ footer{
           <span class="skill-chip">Raspberry Pi</span>
         </div>
         <div class="team-socials">
-          <a href="https://github.com/iamaindrik" target="_blank" rel="noopener" class="social-btn" title="GitHub">
-            <i class="fa-brands fa-github"></i>
+          <a href="https://www.instagram.com/aindrik.in" target="_blank" rel="noopener" class="social-btn" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/aindriksarkar/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/aindriksarkar/" target="_blank" rel="noopener" class="social-btn" title="PieCruiser on LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/piecruiser/" target="_blank" rel="noopener" class="social-btn" title="PieCruiser on LinkedIn">
-            <i class="fa-solid fa-building"></i>
           </a>
         </div>
       </div>
 
-      <!-- Rounak Biswas — TODO: replace placeholder photo, LinkedIn, Instagram & portfolio links below with the real ones -->
+
       <div class="team-card reveal reveal-delay-1">
         <div class="team-card-top">
           <div class="team-img-frame">
-            <!-- TODO: swap with Rounak's real headshot -->
-            <img src="https://i.pravatar.cc/200?img=12" alt="Rounak Biswas — Professional Video Editor at PieCruiser"/>
+            <img src="assets/rounak.jpeg" alt="Rounak Biswas — Professional Video Editor at PieCruiser"/>
           </div>
           <div class="team-name-block">
             <strong>Rounak Biswas</strong>
@@ -1531,14 +1552,14 @@ footer{
           <span class="skill-chip">Sound Design</span>
         </div>
         <div class="team-socials">
-          <!-- TODO: replace href values below with Rounak's real portfolio, LinkedIn & Instagram links -->
-          <a href="https://rounakbiswas.carrd.co" target="_blank" rel="noopener" class="social-btn" title="Portfolio">
+
+          <a href="https://rounak.framer.ai/" target="_blank" rel="noopener" class="social-btn" title="Portfolio">
             <i class="fa-solid fa-briefcase"></i>
           </a>
-          <a href="https://www.linkedin.com/in/rounak-biswas-editor" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/roounak/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="https://www.instagram.com/rounak.edits" target="_blank" rel="noopener" class="social-btn" title="Instagram">
+          <a href="https://www.instagram.com/rooounak/" target="_blank" rel="noopener" class="social-btn" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -1567,11 +1588,11 @@ footer{
             <span>piecruiser@gmail.com</span>
           </div>
         </a>
-        <a class="contact-detail" href="https://github.com/piecruiser" target="_blank" rel="noopener" style="text-decoration:none">
-          <div class="contact-detail-icon"><i class="fa-brands fa-github"></i></div>
+        <a class="contact-detail" href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener" style="text-decoration:none">
+          <div class="contact-detail-icon"><i class="fa-brands fa-instagram"></i></div>
           <div>
-            <strong>GitHub</strong>
-            <span>github.com/piecruiser</span>
+            <strong>Instagram</strong>
+            <span>@piecruiser</span>
           </div>
         </a>
         <a class="contact-detail" href="https://www.linkedin.com/company/piecruiser/" target="_blank" rel="noopener" style="text-decoration:none">
@@ -1633,14 +1654,14 @@ footer{
         <div class="nav-logo">Pie<span>Cruiser</span></div>
         <p>A creative technology studio building websites, AI systems, apps, and digital experiences that drive real results.</p>
         <div class="footer-brand-socials">
-          <a href="https://github.com/iamaindrik" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.85rem" title="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/aindriksarkar/" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.85rem" title="Founder's LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
+          <a href="https://www.instagram.com/piecruiser" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.85rem" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/piecruiser/" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.85rem" title="PieCruiser on LinkedIn">
-            <i class="fa-solid fa-building"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/917041600630?text=Hello" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.85rem" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
       </div>
@@ -1648,33 +1669,31 @@ footer{
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services" onclick="scrollTo('#services');return false">Website Design</a></li>
-          <li><a href="#services" onclick="scrollTo('#services');return false">AI &amp; ML Systems</a></li>
-          <li><a href="#services" onclick="scrollTo('#services');return false">App Development</a></li>
-          <li><a href="#services" onclick="scrollTo('#services');return false">Video Editing</a></li>
-          <li><a href="#services" onclick="scrollTo('#services');return false">IoT Systems</a></li>
+          <li><a href="#services" onclick="scrollTo('#services');">Website Design</a></li>
+          <li><a href="#services" onclick="scrollTo('#services');">AI &amp; ML Systems</a></li>
+          <li><a href="#services" onclick="scrollTo('#services');">App Development</a></li>
+          <li><a href="#services" onclick="scrollTo('#services');">Video Editing</a></li>
+          <li><a href="#services" onclick="scrollTo('#services');">IoT Systems</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="#hero"    onclick="scrollTo('#hero');return false">Home</a></li>
-          <li><a href="#works"   onclick="scrollTo('#works');return false">Our Works</a></li>
-          <li><a href="#clients" onclick="scrollTo('#clients');return false">Clients</a></li>
-          <li><a href="#founder" onclick="scrollTo('#founder');return false">About</a></li>
-          <li><a href="#contact" onclick="scrollTo('#contact');return false">Contact</a></li>
+          <li><a href="#hero"    onclick="scrollTo('#hero');">Home</a></li>
+          <li><a href="#works"   onclick="scrollTo('#works');">Our Works</a></li>
+          <li><a href="#clients" onclick="scrollTo('#clients');">Clients</a></li>
+          <li><a href="#founder" onclick="scrollTo('#founder');">About</a></li>
+          <li><a href="#contact" onclick="scrollTo('#contact');">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Projects</h4>
         <ul>
-          <li><a href="#works" onclick="scrollTo('#works');return false">OrganicPie AI</a></li>
-          <li><a href="#works" onclick="scrollTo('#works');return false">Green Refuel Website</a></li>
-          <li><a href="#works" onclick="scrollTo('#works');return false">Pothole Detection</a></li>
-          <li><a href="#works" onclick="scrollTo('#works');return false">Smart Hydroponic</a></li>
-          <li><a href="#works" onclick="scrollTo('#works');return false">Smart Trolley</a></li>
+          <li><a href="#works" onclick="scrollTo('#works');">OrganicPie AI</a></li>
+          <li><a href="#works" onclick="scrollTo('#works');">Green Refuel Website</a></li>
+          <li><a href="#works" onclick="scrollTo('#works');">Video Reels &amp; Shorts</a></li>
         </ul>
       </div>
 
@@ -1691,9 +1710,13 @@ footer{
 </footer>
 
 <!-- Back to top -->
-<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+<a id="back-top" href="#hero" onclick="scrollTo('#hero');">
   <i class="fa-solid fa-arrow-up"></i>
-</button>
+</a>
+<!-- WhatsApp Button -->
+<a id="whatsapp-btn" href="https://wa.me/917041600630?text=Hello" target="_blank" rel="noopener">
+  <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+</a>
 
 <!-- ═══════ SCRIPTS ═══════ -->
 <script>
