@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — PieCruiser Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F7F4;
+    --surface:#FFFFFF;
+    --ink:#12161C;
+    --muted:#5B6472;
+    --line:#E1E0D9;
+    --marine:#123B52;
+    --marine-deep:#0B2A3B;
+    --coral:#E4632E;
+    --coral-tint:#FCEEE6;
+    --marine-tint:#E9F1F1;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.7;
+    font-size:16px;
+  }
+  h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif;}
+  a{color:var(--marine);}
+
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 40px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .brand{
+    font-weight:700;
+    font-size:20px;
+    color:var(--marine-deep);
+    text-decoration:none;
+    letter-spacing:-0.02em;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block;}
+  .topnav{display:flex;gap:28px;}
+  .topnav a{
+    font-size:14px;
+    font-weight:500;
+    color:var(--muted);
+    text-decoration:none;
+    padding:6px 0;
+    border-bottom:2px solid transparent;
+  }
+  .topnav a.current{color:var(--marine-deep);border-bottom-color:var(--coral);}
+  .topnav a:hover{color:var(--marine-deep);}
+
+  .hero{
+    padding:64px 40px 40px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-size:13px;
+    font-weight:600;
+    color:var(--coral);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin:0 0 12px;
+  }
+  .hero h1{
+    font-size:40px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0 0 14px;
+    color:var(--marine-deep);
+  }
+  .hero p.lede{
+    font-size:17px;
+    color:var(--muted);
+    max-width:640px;
+    margin:0;
+  }
+  .effective{
+    display:inline-block;
+    margin-top:20px;
+    font-size:13px;
+    color:var(--marine-deep);
+    background:var(--marine-tint);
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:500;
+  }
+
+  .layout{
+    max-width:1180px;
+    margin:0 auto;
+    padding:20px 40px 100px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:56px;
+  }
+
+  .rail{
+    position:sticky;
+    top:96px;
+    align-self:start;
+    height:fit-content;
+  }
+  .rail-label{
+    font-size:12px;
+    font-weight:600;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin:0 0 18px;
+  }
+  .route{
+    position:relative;
+    padding-left:28px;
+    border-left:2px solid var(--line);
+  }
+  .waypoint{
+    position:relative;
+    margin-bottom:22px;
+  }
+  .waypoint:last-child{margin-bottom:0;}
+  .waypoint a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--muted);
+    display:block;
+  }
+  .waypoint .num{
+    position:absolute;
+    left:-35px;
+    top:-1px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--surface);
+    border:2px solid var(--line);
+    color:var(--muted);
+    font-size:11px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all .2s ease;
+  }
+  .waypoint.active .num{
+    background:var(--coral);
+    border-color:var(--coral);
+    color:#fff;
+  }
+  .waypoint.active a{color:var(--marine-deep);font-weight:600;}
+
+  .doc section{
+    padding-bottom:36px;
+    margin-bottom:36px;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:96px;
+  }
+  .doc section:last-child{border-bottom:none;}
+  .doc h2{
+    font-size:22px;
+    font-weight:600;
+    color:var(--marine-deep);
+    margin:0 0 14px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .doc h2 .idx{
+    font-size:14px;
+    color:var(--coral);
+    font-weight:700;
+  }
+  .doc p{margin:0 0 14px;color:var(--ink);}
+  .doc ul{margin:0 0 14px;padding-left:20px;}
+  .doc li{margin-bottom:6px;}
+  .doc a.mail{color:var(--marine);font-weight:500;}
+
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px;}
+  .badge{
+    background:var(--coral-tint);
+    color:var(--marine-deep);
+    font-size:13px;
+    font-weight:500;
+    padding:6px 14px;
+    border-radius:20px;
+    border:1px solid var(--line);
+  }
+
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px 28px;
+    margin-top:8px;
+  }
+  .contact-card p{margin:0 0 6px;font-size:14.5px;}
+  .contact-card strong{color:var(--marine-deep);}
+
+  footer{
+    text-align:center;
+    padding:32px 40px;
+    font-size:13px;
+    color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .topbar{padding:16px 20px;}
+    .topnav{gap:16px;}
+    .hero{padding:40px 20px 24px;}
+    .hero h1{font-size:30px;}
+    .layout{grid-template-columns:1fr;padding:20px 20px 60px;gap:24px;}
+    .rail{position:static;}
+    .route{display:flex;overflow-x:auto;border-left:none;padding-left:0;gap:18px;padding-bottom:8px;}
+    .waypoint{margin-bottom:0;flex:0 0 auto;}
+    .waypoint .num{position:static;display:inline-flex;margin-right:6px;}
+    .waypoint a{display:flex;align-items:center;white-space:nowrap;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://piecruiser.in" class="brand"><span class="dot"></span>PieCruiser</a>
+  <nav class="topnav">
+    <a href="https://piecruiser.in">Home</a>
+    <a href="privacy-policy.html">Privacy policy</a>
+    <a href="terms-of-service.html" class="current">Terms of service</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <p class="eyebrow">Legal · piecruiser.in</p>
+  <h1>Terms of service</h1>
+  <p class="lede">The terms that govern working with PieCruiser Technologies, from quotations and payments through delivery and intellectual property.</p>
+  <span class="effective">Effective July 2026</span>
+</div>
+
+<div class="layout">
+  <aside class="rail">
+    <p class="rail-label">On this page</p>
+    <div class="route" id="route">
+      <div class="waypoint"><span class="num">1</span><a href="#s1">Services</a></div>
+      <div class="waypoint"><span class="num">2</span><a href="#s2">Quotations</a></div>
+      <div class="waypoint"><span class="num">3</span><a href="#s3">Payments</a></div>
+      <div class="waypoint"><span class="num">4</span><a href="#s4">Revisions</a></div>
+      <div class="waypoint"><span class="num">5</span><a href="#s5">Client responsibilities</a></div>
+      <div class="waypoint"><span class="num">6</span><a href="#s6">Intellectual property</a></div>
+      <div class="waypoint"><span class="num">7</span><a href="#s7">Third-party costs</a></div>
+      <div class="waypoint"><span class="num">8</span><a href="#s8">Refund policy</a></div>
+      <div class="waypoint"><span class="num">9</span><a href="#s9">Cancellation</a></div>
+      <div class="waypoint"><span class="num">10</span><a href="#s10">Liability</a></div>
+      <div class="waypoint"><span class="num">11</span><a href="#s11">Warranty</a></div>
+      <div class="waypoint"><span class="num">12</span><a href="#s12">Governing law</a></div>
+    </div>
+  </aside>
+
+  <div class="doc">
+
+    <section id="s1">
+      <h2><span class="idx">01</span>Services</h2>
+      <p>PieCruiser Technologies provides:</p>
+      <div class="badge-row">
+        <span class="badge">Website design &amp; development</span>
+        <span class="badge">Social media management</span>
+        <span class="badge">Reel &amp; video editing</span>
+        <span class="badge">Branding &amp; graphic design</span>
+        <span class="badge">AI solutions</span>
+        <span class="badge">Digital marketing</span>
+        <span class="badge">Website maintenance</span>
+        <span class="badge">Consultation services</span>
+      </div>
+    </section>
+
+    <section id="s2">
+      <h2><span class="idx">02</span>Quotations</h2>
+      <p>All quotations remain valid for 30 days unless otherwise specified.</p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="idx">03</span>Payments</h2>
+      <ul>
+        <li>A minimum 50% advance payment is required before project commencement.</li>
+        <li>Remaining payment must be completed before final delivery unless otherwise agreed.</li>
+        <li>Monthly subscription services must be paid in advance.</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="idx">04</span>Revisions</h2>
+      <p>Minor revisions are included according to the agreed package. Additional revisions or changes beyond the agreed scope may incur extra charges.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="idx">05</span>Client responsibilities</h2>
+      <p>The client agrees to provide:</p>
+      <ul>
+        <li>Project requirements</li>
+        <li>Logos</li>
+        <li>Images</li>
+        <li>Content</li>
+        <li>Feedback</li>
+        <li>Necessary approvals</li>
+      </ul>
+      <p>Delays in providing these may affect delivery timelines.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="idx">06</span>Intellectual property</h2>
+      <p>Upon full payment:</p>
+      <ul>
+        <li>Final deliverables become the client's property.</li>
+        <li>PieCruiser Technologies retains the right to showcase completed work in its portfolio unless otherwise agreed in writing.</li>
+      </ul>
+    </section>
+
+    <section id="s7">
+      <h2><span class="idx">07</span>Third-party costs</h2>
+      <p>Unless specifically mentioned, the client is responsible for:</p>
+      <ul>
+        <li>Domain registration</li>
+        <li>Web hosting</li>
+        <li>Premium plugins</li>
+        <li>Stock images</li>
+        <li>API subscriptions</li>
+        <li>Third-party software licenses</li>
+      </ul>
+    </section>
+
+    <section id="s8">
+      <h2><span class="idx">08</span>Refund policy</h2>
+      <p>Payments made are generally non-refundable once work has commenced. Refund requests will be reviewed on a case-by-case basis.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="idx">09</span>Cancellation</h2>
+      <p>Either party may terminate a project with written notice. Completed work performed before cancellation remains billable.</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="idx">10</span>Limitation of liability</h2>
+      <p>PieCruiser Technologies shall not be liable for:</p>
+      <ul>
+        <li>Business losses</li>
+        <li>Data loss caused by third parties</li>
+        <li>Downtime due to hosting providers</li>
+        <li>Indirect or consequential damages</li>
+      </ul>
+    </section>
+
+    <section id="s11">
+      <h2><span class="idx">11</span>Warranty</h2>
+      <p>We strive to deliver high-quality services but cannot guarantee:</p>
+      <ul>
+        <li>Search engine rankings</li>
+        <li>Social media growth</li>
+        <li>Sales or revenue outcomes</li>
+        <li>Third-party platform availability</li>
+      </ul>
+    </section>
+
+    <section id="s12">
+      <h2><span class="idx">12</span>Governing law</h2>
+      <p>These Terms shall be governed by the laws of India. Any disputes shall fall under the jurisdiction of the courts where PieCruiser Technologies operates.</p>
+
+      <div class="contact-card">
+        <p><strong>PieCruiser Technologies</strong></p>
+        <p>Website: <a class="mail" href="https://piecruiser.in">piecruiser.in</a></p>
+        <p>Email: <a class="mail" href="mailto:piecruiser@gmail.com">piecruiser@gmail.com</a></p>
+        <p>Phone: <a class="mail" href="tel:+917041600630">+91 7041600630</a></p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 PieCruiser Technologies. All rights reserved. · <a href="privacy-policy.html">Privacy policy</a>
+</footer>
+
+<script>
+  const waypoints = Array.from(document.querySelectorAll('.waypoint'));
+  const sections = waypoints.map(w => document.querySelector(w.querySelector('a').getAttribute('href')));
+  const setActive = () => {
+    let idx = 0;
+    const trigger = window.scrollY + 140;
+    sections.forEach((sec, i) => { if (sec.offsetTop <= trigger) idx = i; });
+    waypoints.forEach((w, i) => w.classList.toggle('active', i === idx));
+  };
+  document.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+
+</body>
+</html>

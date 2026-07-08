@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — PieCruiser Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F7F4;
+    --surface:#FFFFFF;
+    --ink:#12161C;
+    --muted:#5B6472;
+    --line:#E1E0D9;
+    --marine:#123B52;
+    --marine-deep:#0B2A3B;
+    --coral:#E4632E;
+    --coral-tint:#FCEEE6;
+    --marine-tint:#E9F1F1;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.7;
+    font-size:16px;
+  }
+  h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif;}
+  a{color:var(--marine);}
+
+  /* Top bar */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 40px;
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .brand{
+    font-weight:700;
+    font-size:20px;
+    color:var(--marine-deep);
+    text-decoration:none;
+    letter-spacing:-0.02em;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block;}
+  .topnav{display:flex;gap:28px;}
+  .topnav a{
+    font-size:14px;
+    font-weight:500;
+    color:var(--muted);
+    text-decoration:none;
+    padding:6px 0;
+    border-bottom:2px solid transparent;
+  }
+  .topnav a.current{color:var(--marine-deep);border-bottom-color:var(--coral);}
+  .topnav a:hover{color:var(--marine-deep);}
+
+  /* Hero */
+  .hero{
+    padding:64px 40px 40px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-size:13px;
+    font-weight:600;
+    color:var(--coral);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin:0 0 12px;
+  }
+  .hero h1{
+    font-size:40px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0 0 14px;
+    color:var(--marine-deep);
+  }
+  .hero p.lede{
+    font-size:17px;
+    color:var(--muted);
+    max-width:640px;
+    margin:0;
+  }
+  .effective{
+    display:inline-block;
+    margin-top:20px;
+    font-size:13px;
+    color:var(--marine-deep);
+    background:var(--marine-tint);
+    padding:6px 14px;
+    border-radius:20px;
+    font-weight:500;
+  }
+
+  /* Layout */
+  .layout{
+    max-width:1180px;
+    margin:0 auto;
+    padding:20px 40px 100px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:56px;
+  }
+
+  /* Voyage rail */
+  .rail{
+    position:sticky;
+    top:96px;
+    align-self:start;
+    height:fit-content;
+  }
+  .rail-label{
+    font-size:12px;
+    font-weight:600;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin:0 0 18px;
+  }
+  .route{
+    position:relative;
+    padding-left:28px;
+    border-left:2px solid var(--line);
+  }
+  .waypoint{
+    position:relative;
+    margin-bottom:22px;
+  }
+  .waypoint:last-child{margin-bottom:0;}
+  .waypoint a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--muted);
+    display:block;
+  }
+  .waypoint .num{
+    position:absolute;
+    left:-35px;
+    top:-1px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--surface);
+    border:2px solid var(--line);
+    color:var(--muted);
+    font-size:11px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all .2s ease;
+  }
+  .waypoint.active .num{
+    background:var(--coral);
+    border-color:var(--coral);
+    color:#fff;
+  }
+  .waypoint.active a{color:var(--marine-deep);font-weight:600;}
+
+  /* Content */
+  .doc section{
+    padding-bottom:36px;
+    margin-bottom:36px;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:96px;
+  }
+  .doc section:last-child{border-bottom:none;}
+  .doc h2{
+    font-size:22px;
+    font-weight:600;
+    color:var(--marine-deep);
+    margin:0 0 14px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  .doc h2 .idx{
+    font-size:14px;
+    color:var(--coral);
+    font-weight:700;
+  }
+  .doc p{margin:0 0 14px;color:var(--ink);}
+  .doc ul{margin:0 0 14px;padding-left:20px;}
+  .doc li{margin-bottom:6px;}
+  .doc a.mail{color:var(--marine);font-weight:500;}
+
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px 28px;
+    margin-top:8px;
+  }
+  .contact-card p{margin:0 0 6px;font-size:14.5px;}
+  .contact-card strong{color:var(--marine-deep);}
+
+  footer{
+    text-align:center;
+    padding:32px 40px;
+    font-size:13px;
+    color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .topbar{padding:16px 20px;}
+    .topnav{gap:16px;}
+    .hero{padding:40px 20px 24px;}
+    .hero h1{font-size:30px;}
+    .layout{grid-template-columns:1fr;padding:20px 20px 60px;gap:24px;}
+    .rail{position:static;}
+    .route{display:flex;overflow-x:auto;border-left:none;padding-left:0;gap:18px;padding-bottom:8px;}
+    .waypoint{margin-bottom:0;flex:0 0 auto;}
+    .waypoint .num{position:static;display:inline-flex;margin-right:6px;}
+    .waypoint a{display:flex;align-items:center;white-space:nowrap;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://piecruiser.in" class="brand"><span class="dot"></span>PieCruiser</a>
+  <nav class="topnav">
+    <a href="https://piecruiser.in">Home</a>
+    <a href="privacy-policy.html" class="current">Privacy policy</a>
+    <a href="terms-of-service.html">Terms of service</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <p class="eyebrow">Legal · piecruiser.in</p>
+  <h1>Privacy policy</h1>
+  <p class="lede">How PieCruiser Technologies collects, uses, and protects the information you share with us when you use our website or services.</p>
+  <span class="effective">Effective July 2026</span>
+</div>
+
+<div class="layout">
+  <aside class="rail">
+    <p class="rail-label">On this page</p>
+    <div class="route" id="route">
+      <div class="waypoint"><span class="num">1</span><a href="#s1">Information we collect</a></div>
+      <div class="waypoint"><span class="num">2</span><a href="#s2">How we use it</a></div>
+      <div class="waypoint"><span class="num">3</span><a href="#s3">Information sharing</a></div>
+      <div class="waypoint"><span class="num">4</span><a href="#s4">Data security</a></div>
+      <div class="waypoint"><span class="num">5</span><a href="#s5">Cookies</a></div>
+      <div class="waypoint"><span class="num">6</span><a href="#s6">Third-party services</a></div>
+      <div class="waypoint"><span class="num">7</span><a href="#s7">Data retention</a></div>
+      <div class="waypoint"><span class="num">8</span><a href="#s8">Your rights</a></div>
+      <div class="waypoint"><span class="num">9</span><a href="#s9">Children's privacy</a></div>
+      <div class="waypoint"><span class="num">10</span><a href="#s10">Changes</a></div>
+    </div>
+  </aside>
+
+  <div class="doc">
+
+    <section id="s1">
+      <h2><span class="idx">01</span>Information we collect</h2>
+      <p>We may collect the following information from you:</p>
+      <ul>
+        <li>Full name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Business information</li>
+        <li>Billing information</li>
+        <li>Project requirements</li>
+        <li>Website analytics</li>
+        <li>Payment information (processed securely through third-party payment providers)</li>
+      </ul>
+    </section>
+
+    <section id="s2">
+      <h2><span class="idx">02</span>How we use your information</h2>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Deliver our services</li>
+        <li>Communicate regarding projects</li>
+        <li>Process payments</li>
+        <li>Improve our services</li>
+        <li>Provide customer support</li>
+        <li>Send quotations and invoices</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+    </section>
+
+    <section id="s3">
+      <h2><span class="idx">03</span>Information sharing</h2>
+      <p>We do not sell or rent your personal information. Information may only be shared with:</p>
+      <ul>
+        <li>Payment gateways</li>
+        <li>Domain or hosting providers (if required)</li>
+        <li>Government authorities when legally required</li>
+        <li>Trusted third-party service providers involved in project delivery</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="idx">04</span>Data security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="idx">05</span>Cookies</h2>
+      <p>Our website may use cookies to improve browsing experience and analyze website traffic.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="idx">06</span>Third-party services</h2>
+      <p>Our website may contain links to third-party websites. We are not responsible for their privacy practices.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="idx">07</span>Data retention</h2>
+      <p>We retain client information only as long as necessary for business, legal, or accounting purposes.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="idx">08</span>Your rights</h2>
+      <p>You may request to:</p>
+      <ul>
+        <li>Access your personal information</li>
+        <li>Correct inaccurate information</li>
+        <li>Delete your data where legally applicable</li>
+        <li>Withdraw consent for marketing communications</li>
+      </ul>
+    </section>
+
+    <section id="s9">
+      <h2><span class="idx">09</span>Children's privacy</h2>
+      <p>Our services are not intended for children under 13 years of age.</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="idx">10</span>Changes</h2>
+      <p>We may update this Privacy Policy at any time. Changes become effective immediately upon publication.</p>
+
+      <div class="contact-card">
+        <p><strong>PieCruiser Technologies</strong></p>
+        <p>Email: <a class="mail" href="mailto:piecruiser@gmail.com">piecruiser@gmail.com</a></p>
+        <p>Website: <a class="mail" href="https://piecruiser.in">piecruiser.in</a></p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 PieCruiser Technologies. All rights reserved. · <a href="terms-of-service.html">Terms of service</a>
+</footer>
+
+<script>
+  const waypoints = Array.from(document.querySelectorAll('.waypoint'));
+  const sections = waypoints.map(w => document.querySelector(w.querySelector('a').getAttribute('href')));
+  const setActive = () => {
+    let idx = 0;
+    const trigger = window.scrollY + 140;
+    sections.forEach((sec, i) => { if (sec.offsetTop <= trigger) idx = i; });
+    waypoints.forEach((w, i) => w.classList.toggle('active', i === idx));
+  };
+  document.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+</script>
+
+</body>
+</html>
